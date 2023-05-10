@@ -316,6 +316,7 @@ if __name__ == '__main__':
         Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
         ToTrainArray()
     ])
+    # 制作数据集
     mattingDataset = MattingDataset(transform=transform)
 
     modnet = torch.nn.DataParallel(MODNet())  #.cuda()
